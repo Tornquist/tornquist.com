@@ -1,9 +1,34 @@
 !!!
 %html
   %head
-    %title Tornquist
+    %title NathanTornquist.com
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle{ type: "button", data: {toggle: "collapse", target: "#main-navigation"}}
+            %span.sr-only
+              Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          =link_to "Nathan Tornquist.com", "#", class: "navbar-brand"
+        #main-navigation.collapse.navbar-collapse
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              =link_to "Home", "#"
+            %li
+              =link_to "About Me", "#"
+            %li
+              =link_to "Work", "#"
+            %li
+              =link_to "Play", "#"
+            %li
+              =link_to "Contact", "#"
+            %li
+              %button.btn.btn-default.navbar-btn{type: "button"}
+                Blog
     = yield
