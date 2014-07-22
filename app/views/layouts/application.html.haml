@@ -6,7 +6,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .navbar.navbar-default
+    #navbar.navbar.navbar-default.navbar-fixed-top.sticky
       .container-fluid
         .navbar-header
           %button.navbar-toggle{ type: "button", data: {toggle: "collapse", target: "#main-navigation"}}
@@ -19,16 +19,22 @@
         #main-navigation.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              =link_to "Home", "#"
+              =link_to "Home", "#", id: "home_panelBtn"
             %li
-              =link_to "About Me", "#"
+              =link_to "About Me", "#", id: "about_panelBtn"
             %li
-              =link_to "Work", "#"
+              =link_to "Work", "#", id: "work_panelBtn"
             %li
-              =link_to "Play", "#"
+              =link_to "Play", "#", id: "play_panelBtn"
             %li
-              =link_to "Contact", "#"
+              =link_to "Contact", "#", id: "contact_panelBtn"
             %li
               %button.btn.btn-default.navbar-btn{type: "button"}
                 Blog
     = yield
+
+:javascript
+  $("[id*='Btn']").stop(true).on('click',function(e){e.preventDefault();$(this).scrolld();});
+  var scrolldNavBar = 'navbar';
+  var scrolldMobileNavBar = 'navbar';
+  var scrolldFixed = true;
