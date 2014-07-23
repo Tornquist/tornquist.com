@@ -8,7 +8,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'scrolld.js-rails', '~> 1.0.0'
-gem 'font-awesome-sass-rails'
+gem "font-awesome-rails"
 
 gem 'pg'
 gem 'uglifier', '>= 1.3.0'

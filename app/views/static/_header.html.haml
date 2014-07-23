@@ -1,0 +1,23 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header.page-scroll
+      %button.navbar-toggle{ type: "button", data: {toggle: "collapse", target: "#main-navigation"}}
+        %span.sr-only
+          Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      =link_to "Nathan Tornquist.com", "#page-top", class: "navbar-brand page-scroll"
+    #main-navigation.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.hidden
+          =link_to "", "#page-top"
+        %li
+          =link_to "Who I Am", "#about", class: "page-scroll"
+        %li
+          =link_to "What I've Done", "#portfolio", class: "page-scroll"
+        %li.margin-15
+          =link_to "How to Find Me", "#contact", class: "page-scroll"
+        %li
+          .btn.btn-default.navbar-btn{type: "button"}
+            Blog
