@@ -1,10 +1,17 @@
+%header
+  .container
+    .intro-text
+      .intro-lead-in
+        Hi, I'm Nathan Tornquist
+      .intro-heading
+        I build tools for people
+      =link_to "Learn More About Me", "#about", class: "page-scroll btn btn-xl"
+
+=render :partial => "about"
+
 #home_panel{style: "height: 300px" }
   Homepage
-#about_panel{style: "height: 300px" }
+#portfolio_panel{style: "height: 300px" }
   About Me
-#work_panel{style: "height: 300px" }
-  Work Experience
-#play_panel{style: "height: 300px" }
-  Hobbies and Android
 #contact_panel{style: "height: 300px" }
   Contact Links

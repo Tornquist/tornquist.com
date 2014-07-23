@@ -14,5 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require scrolld
+//= require classie
+//= require cbpAnimatedHeader
+//= require agency
 //= require_tree .
