@@ -1,0 +1,22 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header.page-scroll
+      %button.navbar-toggle{ type: "button", data: {toggle: "collapse", target: "#main-navigation"}}
+        %span.sr-only
+          Toggle Navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      =link_to "Nathan Tornquist", "#page-top", class: "navbar-brand page-scroll"
+    #main-navigation.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.hidden
+          =link_to "", "#page-top"
+        %li
+          =link_to "Who I Am", "#bio", class: "page-scroll"
+        %li
+          =link_to "Where I've Been", "#about", class: "page-scroll"
+        %li.margin-15
+          =link_to "What I've Done", "#portfolio", class: "page-scroll"
+        %li
+          =link_to "Blog", "http://blog.nathantornquist.com", class: "nav-button"

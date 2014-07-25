@@ -1,0 +1,34 @@
+%section.bg-light-gray#portfolio
+  .container
+    .row
+      .col-lg-12.text-center
+        %h2.section-heading
+          What I've Done
+        %h3.section-subheading.text-muted
+          I create Android games for fun.
+    .row
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", href: "#burrow_info"}
+          .portfolio-hover
+            .portfolio-hover-content
+              =fa_icon "plus 3x"
+          =image_tag "burrow.png", class: "img-responsive"
+        .portfolio-caption
+          %p.text-muted A game about survival
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", href: "#arcis_info"}
+          .portfolio-hover
+            .portfolio-hover-content
+              =fa_icon "plus 3x"
+          =image_tag "arcis.png", class: "img-responsive"
+        .portfolio-caption
+          %p.text-muted An Arcade/RTS game
+      .col-md-4.col-sm-6.portfolio-item
+        %a.portfolio-link{"data-toggle" => "modal", href: "#solo_defense_info"}
+          .portfolio-hover
+            .portfolio-hover-content
+              =fa_icon "plus 3x"
+          =image_tag "solo_defense.png", class: "img-responsive"
+        .portfolio-caption
+          %p.text-muted Pong with a Twist
+

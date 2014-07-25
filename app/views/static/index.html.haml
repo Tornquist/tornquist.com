@@ -1,1 +1,13 @@
-Homepage
+%header
+  .container
+    .intro-text
+      .intro-lead-in
+        Hi, I'm Nathan Tornquist
+      .intro-heading
+        I'm a software developer
+      =link_to "Learn More About Me", "#bio", class: "page-scroll btn btn-xl"
+
+=render :partial => "bio"
+=render :partial => "about"
+=render :partial => "portfolio"
+=render :partial => "modal"
