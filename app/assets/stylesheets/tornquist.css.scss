@@ -2,6 +2,62 @@
   margin: auto;
 }
 
-.margin-15 {
-  margin-right: 15px;
+
+.nav-button {
+  background-color: $light-grey;
+  border-radius: 3px;
+  transition: background-color ease .5s;
+
+  &:hover {
+    border-color: $primary-blue;
+    border-width: 1px;
+    border-style: solid;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-button:hover {
+    padding: 9px 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .margin-15 {
+      margin-right: 15px;
+    }
+}
+
+@media (min-width: 780px) {
+  .container {
+    width: 776px;
+  }
+}
+@media (min-width: 840px) {
+  .container {
+    width: 820px;
+  }
+}
+@media (min-width: 860px) {
+  .container {
+    width: 840px;
+  }
+}
+
+@media (min-width: 892px) {
+  .container {
+    width: 870px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }

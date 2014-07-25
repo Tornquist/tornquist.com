@@ -17,6 +17,10 @@ body {
     color: $primary-blue;
 }
 
+.text-white {
+  color: white;
+}
+
 p {
     font-size: 14px;
     line-height: 1.75;
@@ -175,7 +179,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Ek Mukta","Helvetica Neue",Helvetica,Arial,cursive;
     color: $primary-blue;
 }
 
@@ -241,7 +245,7 @@ fieldset[disabled] .btn-xl.active {
     }
 
     .navbar-default .navbar-brand {
-        font-size: 2em;
+        font-size: 1.5em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
