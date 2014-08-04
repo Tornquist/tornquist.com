@@ -4,7 +4,7 @@
 
 
 .nav-button {
-  background-color: $light-grey;
+  background-color: $light-gray;
   border-radius: 3px;
   transition: background-color ease .5s;
 
@@ -85,3 +85,8 @@ em {
     width: 100%;
   }
 }
+
+.section_sm {
+  padding: 75px 0;
+}
+
