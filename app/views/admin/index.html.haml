@@ -1,34 +1,19 @@
-.navbar.navbar-default.navbar-fixed-top.navbar-shrink-lock
-  .container
-    .navbar-header.page-scroll
-      %button.navbar-toggle{ type: "button", data: {toggle: "collapse", target: "#main-navigation"}}
-        %span.sr-only
-          Toggle Navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      =link_to "Admin Panel", "#page-top", class: "navbar-brand page-scroll"
-    #main-navigation.collapse.navbar-collapse
-      %ul.nav.navbar-nav.navbar-right
-        %li.margin-15
-          =link_to "Admin", edit_user_registration_path
-        %li
-          =link_to "Log Out", destroy_user_session_path, :method => :delete, class: "nav-button"
-.section_sm
-  .container
-    .row
-      .col-lg-12
-        %h1
-          Site Information
-    .row
-      .col-lg-12
-        %h1
-          Biography
-    .row
-      .col-lg-12
-        %h1
-          Employment
-    .row
-      .col-lg-12
-        %h1
-          Portfolio
+=render :partial => "common/admin_navbar"
+.container
+  =render :partial => "common/notice"
+  .row
+    .col-lg-12
+      %h1
+        Site Information
+  .row
+    .col-lg-12
+      %h1
+        Biography
+  .row
+    .col-lg-12
+      %h1
+        Employment
+  .row
+    .col-lg-12
+      %h1
+        Portfolio
