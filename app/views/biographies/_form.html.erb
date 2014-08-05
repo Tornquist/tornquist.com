@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= f.label :name %><br>
-    <%= f.text_area :name %>
+    <%= f.text_field :name %>
   </div>
   <div class="field">
     <%= f.label :slogan %><br>
-    <%= f.text_area :slogan %>
+    <%= f.text_field :slogan %>
   </div>
   <div class="field">
     <%= f.label :greeting %><br>
-    <%= f.text_area :greeting %>
+    <%= f.text_field :greeting %>
   </div>
   <div class="field">
     <%= f.label :website_name %><br>
-    <%= f.text_area :website_name %>
+    <%= f.text_field :website_name %>
   </div>
   <div class="field">
     <%= f.label :website_title %><br>
-    <%= f.text_area :website_title %>
+    <%= f.text_field :website_title %>
   </div>
   <div class="field">
     <%= f.label :bio_html %><br>
-    <%= f.text_area :bio_html %>
+    <%= f.text_area :bio_html, :rows => "10" %>
   </div>
   <div class="actions">
     <%= f.submit %>

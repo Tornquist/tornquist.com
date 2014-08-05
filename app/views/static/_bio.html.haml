@@ -11,7 +11,7 @@
         .team-member
           =image_tag "nathan.png", class: "img-responsive img-circle"
           %h4
-            Nathan Tornquist
+            =@name
           %p
           %ul.list-inline.social-buttons
             %li
@@ -24,31 +24,4 @@
               %a{href: "http://stackoverflow.com/users/831913/nathan-tornquist"}
                 =fa_icon "stack-overflow"
       .col-sm-8.portfolio-modal
-        %p.bio
-          Hello, my name is Nathan Tornquist.
-        %p.bio
-          I am a student at
-          %em
-            =link_to "Purdue University", "http://www.purdue.edu"
-          studying Computer Engineering.
-        %p.bio
-          Outside of class, I spend a large majority of my time playing my
-          %em
-            =link_to "trumpet", "https://www.youtube.com/watch?v=na7Hd5-F1Fk"
-          \. During the fall you can find me rehearsing every day with the
-          %em
-            =link_to "marching band", "http://www.purdue.edu/bands"
-          \.
-        %p.bio
-          While most of my work is in software, I also enjoy hardware projects.  You can read
-          about some of the more unusual things I have built if you take a look at my
-          %em
-            =link_to "blog", "http://blog.nathantornquist.com"
-          \.
-        %p.bio
-          Feel free to reach out to me via
-          %em
-            =mail_to "nathantornquist@gmail.com", "email"
-          and I will get back to you as soon as possible.
-        %p.bio
-          Best wishes, Nathan
+        =@biography.html_safe

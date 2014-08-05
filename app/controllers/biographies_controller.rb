@@ -42,10 +42,10 @@ class BiographiesController < ApplicationController
   def update
     respond_to do |format|
       if @biography.update(biography_params)
-        format.html { redirect_to @biography, notice: 'Biography was successfully updated.' }
+        format.html { redirect_to admin_home_path, notice: 'Biography was successfully updated.' }
         format.json { render :show, status: :ok, location: @biography }
       else
-        format.html { render :edit }
+        format.html { render admin_home_path }
         format.json { render json: @biography.errors, status: :unprocessable_entity }
       end
     end
