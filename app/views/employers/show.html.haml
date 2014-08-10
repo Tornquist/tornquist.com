@@ -1,0 +1,34 @@
+=render :partial => "common/admin_navbar"
+.container
+  =render :partial => "common/notice"
+  .page-header
+    %h1
+      Employer Details
+  .panel.panel-default
+    .panel-heading
+      Name
+    .panel-body
+      =@employer.name
+  .panel.panel-default
+    .panel-heading
+      Dates
+    .panel-body
+      =@employer.dates
+  .panel.panel-default
+    .panel-heading
+      Description
+    .panel-body
+      =@employer.description
+  .panel.panel-default
+    .panel-heading
+      Image
+    .panel-body
+      =@employer.image
+  .panel.panel-default
+    .panel-heading
+      Rank
+    .panel-body
+      =@employer.rank
+  = link_to 'Edit', edit_employer_path(@employer), class: "btn btn-primary"
+  |
+  = link_to 'Back', admin_home_path, class: "btn btn-primary"

@@ -1,5 +1,6 @@
 class EmployersController < ApplicationController
   before_action :set_employer, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /employers
   # GET /employers.json
@@ -56,7 +57,7 @@ class EmployersController < ApplicationController
   def destroy
     @employer.destroy
     respond_to do |format|
-      format.html { redirect_to employers_url, notice: 'Employer was successfully destroyed.' }
+      format.html { redirect_to admin_home_path, notice: 'Employer was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

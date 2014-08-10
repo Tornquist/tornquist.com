@@ -1,5 +1,6 @@
 class BiographiesController < ApplicationController
   before_action :set_biography, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /biographies
   # GET /biographies.json
