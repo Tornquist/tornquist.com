@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dates: MyText
+  name: MyText
+  description: MyText
+  image: MyText
+  rank: 1
+
+two:
+  dates: MyText
+  name: MyText
+  description: MyText
+  image: MyText
+  rank: 1

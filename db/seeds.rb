@@ -10,6 +10,29 @@
 
 User.create(email: "Name@mail.com", password: "password", password_confirmation: "password", username: "Admin")
 
+Employer.create(dates: "2014",
+                name: "Enova Financial",
+                description: "As a rails developer I helped create an automated system for the management of customer reports, loan processing, and billing. In addition I worked on a visualization tool for SQL queries and automated rebilling of customers.", 
+                image: "enova.png",
+                rank: 1)
+
+Employer.create(dates: "2013",
+                name: "Kingland Systems",
+                description: "I led the research efforts into ETL technologies using IBM DataSphere and developed an extensive set of templates, scripts, and documentation.",
+                image: "kingland.png",
+                rank: 2)
+
+Employer.create(dates: "2013",
+                name: "Purdue Engineering Education",
+                description: "I redesigned a site that provided vital information to advisers and integrated with an Android-based queuing system. The platform was built in HTML5, Python, and DTML.",
+                image: "purdue.png",
+                rank: 3)
+
+Employer.create(dates: "2010-2012",
+                name: "DealerBuilt",
+                description: " As a .NET developer I built numerous web automations and interfaces. Additionally I worked on the design and development of an internal chat system used for communication, system alerts, and auditing.",
+                image: "dealerbuilt.png",
+                rank: 4)
 
 Biography.create(name: "Nathan Tornquist",
                  slogan: "I'm a Software Developer",

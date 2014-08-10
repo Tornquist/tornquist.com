@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dates:</strong>
+  <%= @employer.dates %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @employer.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @employer.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @employer.image %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @employer.rank %>
+</p>
+
+<%= link_to 'Edit', edit_employer_path(@employer) %> |
+<%= link_to 'Back', employers_path %>
