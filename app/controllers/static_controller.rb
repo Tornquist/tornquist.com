@@ -7,5 +7,6 @@ class StaticController < ApplicationController
     @website_title = biography_data[:website_title]
     @name = biography_data[:name]
     @biography = biography_data[:bio_html]
+    @employers = Employer.order(:rank)
   end
 end
