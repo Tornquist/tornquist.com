@@ -2,6 +2,9 @@
   .container
     .row
       .col-md-4.text-white
-        %span.copyright Copyright © Nathan Tornquist 2014
+        %span.copyright
+          Copyright ©
+          =@name
+          =Time.now.year
       .col-md-4
         =render :partial => "social_buttons"
