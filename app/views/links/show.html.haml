@@ -1,0 +1,24 @@
+=render :partial => "common/admin_navbar"
+.container
+  =render :partial => "common/notice"
+  .page-header
+    %h1
+      Link Details
+  .panel.panel-default
+    .panel-heading
+      Icon
+    .panel-body
+      =@link.icon
+  .panel.panel-default
+    .panel-heading
+      URL
+    .panel-body
+      =@link.url
+  .panel.panel-default
+    .panel-heading
+      Rank
+    .panel-body
+      =@link.rank
+  = link_to 'Edit', edit_link_path(@link), class: "btn btn-primary"
+  |
+  = link_to 'Back', admin_home_path, class: "btn btn-primary"

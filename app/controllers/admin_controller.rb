@@ -4,5 +4,6 @@ class AdminController < ApplicationController
     @biography = Biography.first
     @employers = Employer.order(:rank)
     @projects  = Project.order(:rank)
+    @links     = Link.order(:rank)
   end
 end

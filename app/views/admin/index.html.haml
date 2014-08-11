@@ -57,3 +57,29 @@
                   %td
                     = link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
           = link_to 'New Project', new_project_path
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseFour"}
+            %h1
+              Links
+      #collapseFour.panel-collapse.collapse
+        .panel-body
+          %table.table
+            %tbody
+              -@links.each do |link|
+                %tr
+                  %td
+                    =link.rank
+                  %td
+                    =link.icon
+                    (
+                    =link.url
+                    )
+                  %td
+                    = link_to 'Show', link
+                  %td
+                    = link_to 'Edit', edit_link_path(link)
+                  %td
+                    = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'New Link', new_link_path

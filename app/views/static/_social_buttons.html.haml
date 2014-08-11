@@ -1,0 +1,5 @@
+%ul.list-inline.social-buttons
+  -@links.each do |link|
+    %li
+      %a{href: link.url}
+        =fa_icon link.icon

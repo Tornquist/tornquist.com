@@ -13,15 +13,6 @@
           %h4
             =@name
           %p
-          %ul.list-inline.social-buttons
-            %li
-              %a{href: "https://www.linkedin.com/in/nathantornquist"}
-                =fa_icon "linkedin"
-            %li
-              %a{href: "https://github.com/Tornquist/"}
-                =fa_icon "github"
-            %li
-              %a{href: "http://stackoverflow.com/users/831913/nathan-tornquist"}
-                =fa_icon "stack-overflow"
+            =render :partial => "social_buttons"
       .col-sm-8.portfolio-modal
         =@biography.html_safe

@@ -9,5 +9,6 @@ class StaticController < ApplicationController
     @biography = biography_data[:bio_html]
     @employers = Employer.order(:rank)
     @projects = Project.order(:rank)
+    @links = Link.order(:rank)
   end
 end
