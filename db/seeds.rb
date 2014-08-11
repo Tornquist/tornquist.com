@@ -76,6 +76,18 @@ Project.create(caption: "Pong with a Twist",
                category: "Arcade",
                rank: 3)
 
+Link.create(icon: "linkedin",
+            url: "https://www.linkedin.com/in/nathantornquist",
+            rank: 1)
+
+Link.create(icon: "github",
+            url: "https://github.com/Tornquist/",
+            rank: 2)
+
+Link.create(icon: "stack-overflow",
+            url: "http://stackoverflow.com/users/831913/nathan-tornquist",
+            rank: 3)
+
 Biography.create(name: "Nathan Tornquist",
                  slogan: "I'm a Software Developer",
                  greeting: "Hi, I'm Nathan Tornquist",
