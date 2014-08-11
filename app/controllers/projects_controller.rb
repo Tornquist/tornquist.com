@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /projects
   # GET /projects.json
@@ -56,7 +57,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to admin_home_path, notice: 'Project was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

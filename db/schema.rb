@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140811130445) do
   create_table "projects", force: true do |t|
     t.text     "caption"
     t.text     "title"
-    t.text     "subtitie"
+    t.text     "subtitle"
     t.text     "thumbnail"
     t.text     "image"
     t.text     "description"

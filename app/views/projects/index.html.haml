@@ -1,0 +1,39 @@
+%h1 Listing projects
+%table
+  %thead
+    %tr
+      %th Caption
+      %th Title
+      %th subtitle
+      %th Thumbnail
+      %th Image
+      %th Description
+      %th Google url
+      %th Github url
+      %th Music url
+      %th Date
+      %th Copyright
+      %th Type
+      %th Rank
+      %th{colspan: "3"}
+  %tbody
+    - @projects.each do |project|
+      %tr
+        %td= project.caption
+        %td= project.title
+        %td= project.subtitle
+        %td= project.thumbnail
+        %td= project.image
+        %td= project.description
+        %td= project.google_url
+        %td= project.github_url
+        %td= project.music_url
+        %td= project.date
+        %td= project.copyright
+        %td= project.category
+        %td= project.rank
+        %td= link_to 'Show', project
+        %td= link_to 'Edit', edit_project_path(project)
+        %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+= link_to 'New Project', new_project_path

@@ -3,5 +3,6 @@ class AdminController < ApplicationController
   def index
     @biography = Biography.first
     @employers = Employer.order(:rank)
+    @projects  = Project.order(:rank)
   end
 end
