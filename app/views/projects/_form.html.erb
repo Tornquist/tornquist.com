@@ -1,0 +1,69 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :caption %><br>
+    <%= f.text_area :caption %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_area :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitie %><br>
+    <%= f.text_area :subtitie %>
+  </div>
+  <div class="field">
+    <%= f.label :thumbnail %><br>
+    <%= f.text_area :thumbnail %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_area :image %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :google_url %><br>
+    <%= f.text_area :google_url %>
+  </div>
+  <div class="field">
+    <%= f.label :github_url %><br>
+    <%= f.text_area :github_url %>
+  </div>
+  <div class="field">
+    <%= f.label :music_url %><br>
+    <%= f.text_area :music_url %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_area :date %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br>
+    <%= f.text_area :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_area :category %>
+  </div>
+  <div class="field">
+    <%= f.label :rank %><br>
+    <%= f.number_field :rank %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
