@@ -1,4 +1,4 @@
-= form_for(@employer) do |f|
+= form_for(@employer, :html => { :style => "margin-bottom: 5px" } ) do |f|
   - if @employer.errors.any?
     #error_explanation
       %h2
@@ -28,4 +28,4 @@
     %br/
     = f.number_field :rank
   .actions
-    = f.submit :class => "btn btn-success"
+    = f.submit class: "btn btn-success"
