@@ -88,6 +88,16 @@ Link.create(icon: "stack-overflow",
             url: "http://stackoverflow.com/users/831913/nathan-tornquist",
             rank: 3)
 
+SiteHeader.create(biography_title: "Who I Am",
+                  biography_subtitle: "I'd like to tell you about myself.",
+                  employment_title: "Where I've Been",
+                  employment_subtitle: "I am a software developer, and this is where I have worked.",
+                  portfolio_title: "What I've Done",
+                  portfolio_subtitle: "I create Android games for fun.",
+                  external_title: "Blog",
+                  external_url: "http://blog.nathantornquist.com/",
+                  main_button_title: "Learn More About Me")
+
 Biography.create(name: "Nathan Tornquist",
                  slogan: "I'm a Software Developer",
                  greeting: "Hi, I'm Nathan Tornquist",

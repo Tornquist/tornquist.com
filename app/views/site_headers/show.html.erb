@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Biography title:</strong>
+  <%= @site_header.biography_title %>
+</p>
+
+<p>
+  <strong>Biography subtitle:</strong>
+  <%= @site_header.biography_subtitle %>
+</p>
+
+<p>
+  <strong>Employment title:</strong>
+  <%= @site_header.employment_title %>
+</p>
+
+<p>
+  <strong>Employment subtitle:</strong>
+  <%= @site_header.employment_subtitle %>
+</p>
+
+<p>
+  <strong>Portfolio title:</strong>
+  <%= @site_header.portfolio_title %>
+</p>
+
+<p>
+  <strong>Portfolio subtitle:</strong>
+  <%= @site_header.portfolio_subtitle %>
+</p>
+
+<p>
+  <strong>External title:</strong>
+  <%= @site_header.external_title %>
+</p>
+
+<p>
+  <strong>External url:</strong>
+  <%= @site_header.external_url %>
+</p>
+
+<p>
+  <strong>Main button title:</strong>
+  <%= @site_header.main_button_title %>
+</p>
+
+<%= link_to 'Edit', edit_site_header_path(@site_header) %> |
+<%= link_to 'Back', site_headers_path %>

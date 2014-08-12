@@ -5,9 +5,18 @@
     .panel.panel-default
       .panel-heading
         %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseZero"}
+            %h1
+              Site Information
+      #collapseZero.panel-collapse.collapse
+        .panel-body
+          =render 'site_headers/form'
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
           %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
             %h1
-              General Information
+              General Personal Information
       #collapseOne.panel-collapse.collapse
         .panel-body
           =render 'biographies/form'

@@ -1,0 +1,47 @@
+= form_for(@site_header) do |f|
+  - if @site_header.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@site_header.errors.count, "error")
+        prohibited this site_header from being saved:
+      %ul
+        - @site_header.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :biography_title
+    %br/
+    = f.text_field :biography_title
+  .field
+    = f.label :biography_subtitle
+    %br/
+    = f.text_field :biography_subtitle
+  .field
+    = f.label :employment_title
+    %br/
+    = f.text_field :employment_title
+  .field
+    = f.label :employment_subtitle
+    %br/
+    = f.text_field :employment_subtitle
+  .field
+    = f.label :portfolio_title
+    %br/
+    = f.text_field :portfolio_title
+  .field
+    = f.label :portfolio_subtitle
+    %br/
+    = f.text_field :portfolio_subtitle
+  .field
+    = f.label :external_title
+    %br/
+    = f.text_field :external_title
+  .field
+    = f.label :external_url
+    %br/
+    = f.text_field :external_url
+  .field
+    = f.label :main_button_title
+    %br/
+    = f.text_field :main_button_title
+  .actions
+    = f.submit class: "btn btn-success"

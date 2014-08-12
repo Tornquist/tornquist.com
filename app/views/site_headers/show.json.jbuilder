@@ -1,0 +1,1 @@
+json.extract! @site_header, :id, :biography_title, :biography_subtitle, :employment_title, :employment_subtitle, :portfolio_title, :portfolio_subtitle, :external_title, :external_url, :main_button_title, :created_at, :updated_at

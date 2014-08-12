@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140811141422) do
+ActiveRecord::Schema.define(version: 20140812021006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,20 @@ ActiveRecord::Schema.define(version: 20140811141422) do
     t.text     "copyright"
     t.text     "category"
     t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "site_headers", force: true do |t|
+    t.text     "biography_title"
+    t.text     "biography_subtitle"
+    t.text     "employment_title"
+    t.text     "employment_subtitle"
+    t.text     "portfolio_title"
+    t.text     "portfolio_subtitle"
+    t.text     "external_title"
+    t.text     "external_url"
+    t.text     "main_button_title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

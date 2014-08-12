@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :site_headers
+
   resources :links
 
   resources :projects
