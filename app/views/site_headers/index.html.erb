@@ -1,0 +1,41 @@
+<h1>Listing site_headers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Biography title</th>
+      <th>Biography subtitle</th>
+      <th>Employment title</th>
+      <th>Employment subtitle</th>
+      <th>Portfolio title</th>
+      <th>Portfolio subtitle</th>
+      <th>External title</th>
+      <th>External url</th>
+      <th>Main button title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @site_headers.each do |site_header| %>
+      <tr>
+        <td><%= site_header.biography_title %></td>
+        <td><%= site_header.biography_subtitle %></td>
+        <td><%= site_header.employment_title %></td>
+        <td><%= site_header.employment_subtitle %></td>
+        <td><%= site_header.portfolio_title %></td>
+        <td><%= site_header.portfolio_subtitle %></td>
+        <td><%= site_header.external_title %></td>
+        <td><%= site_header.external_url %></td>
+        <td><%= site_header.main_button_title %></td>
+        <td><%= link_to 'Show', site_header %></td>
+        <td><%= link_to 'Edit', edit_site_header_path(site_header) %></td>
+        <td><%= link_to 'Destroy', site_header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Site header', new_site_header_path %>

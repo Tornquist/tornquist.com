@@ -1,0 +1,23 @@
+= form_for(@link, :html => { :style => "margin-bottom: 5px" }) do |f|
+  - if @link.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@link.errors.count, "error")
+        prohibited this link from being saved:
+      %ul
+        - @link.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :icon
+    %br/
+    = f.text_area :icon
+  .field
+    = f.label :url
+    %br/
+    = f.text_area :url
+  .field
+    = f.label :rank
+    %br/
+    = f.number_field :rank
+  .actions
+    = f.submit class: "btn btn-success"

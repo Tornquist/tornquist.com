@@ -1,4 +1,94 @@
-%h1
-  Secure Admin Login
-%p
-  TODO: Add custom site customization online
+=render :partial => "common/admin_navbar"
+.container
+  =render :partial => "common/notice"
+  #accordion.panel-group
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseZero"}
+            %h1
+              Site Information
+      #collapseZero.panel-collapse.collapse
+        .panel-body
+          =render 'site_headers/form'
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseOne"}
+            %h1
+              General Personal Information
+      #collapseOne.panel-collapse.collapse
+        .panel-body
+          =render 'biographies/form'
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseTwo"}
+            %h1
+              Employment
+      #collapseTwo.panel-collapse.collapse
+        .panel-body
+          %table.table
+            %tbody
+              -@employers.each do |employer|
+                %tr
+                  %td
+                    =employer.rank
+                  %td
+                    =employer.name
+                  %td
+                    = link_to 'Show', employer
+                  %td
+                    = link_to 'Edit', edit_employer_path(employer)
+                  %td
+                    = link_to 'Destroy', employer, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'New Employer', new_employer_path
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseThree"}
+            %h1
+              Portfolio
+      #collapseThree.panel-collapse.collapse
+        .panel-body
+          %table.table
+            %tbody
+              -@projects.each do |project|
+                %tr
+                  %td
+                    =project.rank
+                  %td
+                    =project.title
+                  %td
+                    = link_to 'Show', project
+                  %td
+                    = link_to 'Edit', edit_project_path(project)
+                  %td
+                    = link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'New Project', new_project_path
+    .panel.panel-default
+      .panel-heading
+        %h4.panel-title
+          %a{"data-parent" => "#accordion", "data-toggle" => "collapse", href: "#collapseFour"}
+            %h1
+              Links
+      #collapseFour.panel-collapse.collapse
+        .panel-body
+          %table.table
+            %tbody
+              -@links.each do |link|
+                %tr
+                  %td
+                    =link.rank
+                  %td
+                    =link.icon
+                    (
+                    =link.url
+                    )
+                  %td
+                    = link_to 'Show', link
+                  %td
+                    = link_to 'Edit', edit_link_path(link)
+                  %td
+                    = link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'New Link', new_link_path

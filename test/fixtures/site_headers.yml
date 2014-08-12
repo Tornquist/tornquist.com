@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  biography_title: MyText
+  biography_subtitle: MyText
+  employment_title: MyText
+  employment_subtitle: MyText
+  portfolio_title: MyText
+  portfolio_subtitle: MyText
+  external_title: MyText
+  external_url: MyText
+  main_button_title: MyText
+
+two:
+  biography_title: MyText
+  biography_subtitle: MyText
+  employment_title: MyText
+  employment_subtitle: MyText
+  portfolio_title: MyText
+  portfolio_subtitle: MyText
+  external_title: MyText
+  external_url: MyText
+  main_button_title: MyText

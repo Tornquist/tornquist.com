@@ -3,62 +3,22 @@
     .row
       .col-lg-12.text-center
         %h2.section-heading
-          Where I've been
+          =@site_header.employment_title
         %h3.section-subheading.text-muted
-          I am a software developer, and this is where I have worked.
+          =@site_header.employment_subtitle
     .row
       .col-lg-12
         %ul.timeline
-          %li
-            .timeline-image
-              =image_tag "enova.png", class: "img-circle img-responsive"
-            .timeline-panel
-              .timeline-heading
-                %h4
-                  2014
-                %h4.subheading
-                  Enova Financial
-              .timeline-body
-                %p.text-muted
-                  As a rails developer I helped create an automated system for the management of customer reports, loan processing, and billing.  In
-                  addition I worked on a visualization tool for SQL queries and automated rebilling of customers.
-          %li.timeline-inverted
-            .timeline-image
-              =image_tag "kingland.png", class: "img-circle img-responsive"
-            .timeline-panel
-              .timeline-heading
-                %h4
-                  2013
-                %h4.subheading
-                  Kingland Systems
-              .timeline-body
-                %p.text-muted
-                  I led the research efforts into ETL technologies using IBM DataSphere and developed an extensive set of
-                  templates, scripts, and documentation.
-          %li
-            .timeline-image
-              =image_tag "purdue.png", class: "img-circle img-responsive"
-            .timeline-panel
-              .timeline-heading
-                %h4
-                  2013
-                %h4.subheading
-                  Purdue Engineering Education
-              .timeline-body
-                %p.text-muted
-                  I redesigned a site that provided vital information to advisers and integrated with an Android-based
-                  queuing system. The platform was built in HTML5, Python, and DTML.
-          %li.timeline-inverted
-            .timeline-image
-              =image_tag "dealerbuilt.png", class: "img-circle img-responsive"
-            .timeline-panel
-              .timeline-heading
-                %h4
-                  2010-2012
-                %h4.subheading
-                  DealerBuilt
-              .timeline-body
-                %p.text-muted
-                  As a .NET developer I built numerous web automations and
-                  interfaces.  Additionally I worked on the design and development of an internal chat system
-                  used for communication, system alerts, and auditing.
+          -@employers.each do |employer|
+            %li{class: cycle('timeline', 'timeline-inverted')}
+              .timeline-image
+                =image_tag employer.image, class: "img-circle img-responsive"
+              .timeline-panel
+                .timeline-heading
+                  %h4
+                    =employer.dates
+                  %h4.subheading
+                    =employer.name
+                .timeline-body
+                  %p.text-muted
+                    =employer.description

@@ -2,15 +2,9 @@
   .container
     .row
       .col-md-4.text-white
-        %span.copyright Copyright © Nathan Tornquist 2014
+        %span.copyright
+          Copyright ©
+          =@name
+          =Time.now.year
       .col-md-4
-        %ul.list-inline.social-buttons
-          %li
-            %a{href: "https://www.linkedin.com/in/nathantornquist"}
-              =fa_icon "linkedin"
-          %li
-            %a{href: "https://github.com/Tornquist/"}
-              =fa_icon "github"
-          %li
-            %a{href: "http://stackoverflow.com/users/831913/nathan-tornquist"}
-              =fa_icon "stack-overflow"
+        =render :partial => "social_buttons"

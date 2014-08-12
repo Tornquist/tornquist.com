@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  caption: MyText
+  title: MyText
+  subtitie: MyText
+  thumbnail: MyText
+  image: MyText
+  description: MyText
+  google_url: MyText
+  github_url: MyText
+  music_url: MyText
+  date: MyText
+  copyright: MyText
+  type: MyText
+  rank: 1
+
+two:
+  caption: MyText
+  title: MyText
+  subtitie: MyText
+  thumbnail: MyText
+  image: MyText
+  description: MyText
+  google_url: MyText
+  github_url: MyText
+  music_url: MyText
+  date: MyText
+  copyright: MyText
+  type: MyText
+  rank: 1

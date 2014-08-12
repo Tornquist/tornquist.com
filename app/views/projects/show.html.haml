@@ -1,0 +1,74 @@
+=render :partial => "common/admin_navbar"
+.container
+  =render :partial => "common/notice"
+  .page-header
+    %h1
+      Project Details
+  .panel.panel-default
+    .panel-heading
+      Title
+    .panel-body
+      =@project.title
+  .panel.panel-default
+    .panel-heading
+      Subtitle
+    .panel-body
+      =@project.subtitle
+  .panel.panel-default
+    .panel-heading
+      Caption
+    .panel-body
+      =@project.caption
+  .panel.panel-default
+    .panel-heading
+      Thumbnail
+    .panel-body
+      =@project.thumbnail
+  .panel.panel-default
+    .panel-heading
+      Image
+    .panel-body
+      =@project.image
+  .panel.panel-default
+    .panel-heading
+      Description
+    .panel-body
+      =@project.description
+  .panel.panel-default
+    .panel-heading
+      Google URL
+    .panel-body
+      =@project.google_url
+  .panel.panel-default
+    .panel-heading
+      Github URL
+    .panel-body
+      =@project.github_url
+  .panel.panel-default
+    .panel-heading
+      Music URL
+    .panel-body
+      =@project.music_url
+  .panel.panel-default
+    .panel-heading
+      Date
+    .panel-body
+      =@project.date
+  .panel.panel-default
+    .panel-heading
+      Copyright
+    .panel-body
+      =@project.copyright
+  .panel.panel-default
+    .panel-heading
+      Category
+    .panel-body
+      =@project.category
+  .panel.panel-default
+    .panel-heading
+      Rank
+    .panel-body
+      =@project.rank
+  = link_to 'Edit', edit_project_path(@project), class: "btn btn-primary"
+  |
+  = link_to 'Back', admin_home_path, class: "btn btn-primary"

@@ -4,7 +4,7 @@
 
 
 .nav-button {
-  background-color: $light-grey;
+  background-color: $light-gray;
   border-radius: 3px;
   transition: background-color ease .5s;
 
@@ -77,5 +77,33 @@ em {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+
+.login {
+  input {
+    width: 100%;
+  }
+}
+
+.section_sm {
+  padding: 75px 0;
+}
+
+.header_offset {
+  padding: 75px 0 0 0;
+}
+
+.navbar-default.navbar-shrink-lock {
+  padding: 10px 0;
+  background-color: $dark-gray;
+}
+
+.field {
+  input {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
   }
 }

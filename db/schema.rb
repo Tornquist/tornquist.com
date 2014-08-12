@@ -11,10 +11,71 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140721012945) do
+ActiveRecord::Schema.define(version: 20140812021006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "biographies", force: true do |t|
+    t.text     "name"
+    t.text     "slogan"
+    t.text     "greeting"
+    t.text     "website_name"
+    t.text     "website_title"
+    t.text     "bio_html"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employers", force: true do |t|
+    t.text     "dates"
+    t.text     "name"
+    t.text     "description"
+    t.text     "image"
+    t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", force: true do |t|
+    t.text     "icon"
+    t.text     "url"
+    t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "projects", force: true do |t|
+    t.text     "caption"
+    t.text     "title"
+    t.text     "subtitle"
+    t.text     "thumbnail"
+    t.text     "image"
+    t.text     "description"
+    t.text     "google_url"
+    t.text     "github_url"
+    t.text     "music_url"
+    t.text     "date"
+    t.text     "copyright"
+    t.text     "category"
+    t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "site_headers", force: true do |t|
+    t.text     "biography_title"
+    t.text     "biography_subtitle"
+    t.text     "employment_title"
+    t.text     "employment_subtitle"
+    t.text     "portfolio_title"
+    t.text     "portfolio_subtitle"
+    t.text     "external_title"
+    t.text     "external_url"
+    t.text     "main_button_title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

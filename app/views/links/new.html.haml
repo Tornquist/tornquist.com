@@ -1,0 +1,9 @@
+=render :partial => "common/admin_navbar"
+.container
+  =render :partial => "common/notice"
+  %h1
+    New Link
+
+  = render 'form'
+
+  = link_to 'Back', admin_home_path, class: "btn btn-primary"
